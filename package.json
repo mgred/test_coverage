@@ -1,0 +1,19 @@
+{
+    "name": "test_coverage",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@bazel/bazelisk": "latest",
+        "@bazel/buildifier": "latest",
+        "@bazel/ibazel": "latest",
+        "@bazel/jasmine": "^5.4.0",
+        "@bazel/typescript": "latest",
+        "c8": "^7.11.0",
+        "jasmine": "^4.1.0",
+        "typescript": "latest"
+    },
+    "scripts": {
+        "build": "bazel build //...",
+        "test": "bazel test //..."
+    }
+}
