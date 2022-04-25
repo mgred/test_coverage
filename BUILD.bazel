@@ -6,6 +6,7 @@
 #   so that ts_library rules still use it by default.
 #   See https://www.npmjs.com/package/@bazel/typescript#installation
 load("@npm//@bazel/jasmine:index.bzl", "jasmine_node_test")
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
 
 exports_files(["tsconfig.json"], visibility = ["//:__subpackages__"])
 
@@ -15,3 +16,14 @@ jasmine_node_test(
     deps = ["@npm//c8"],
 )
 
+ts_project(
+    name = "ts",
+    srcs = ["index.ts", "spec.ts"],
+    deps = ["@npm//@types/jasmine"],
+)
+
+jasmine_node_test(
+    name = "test_ts",
+    srcs = [":ts"],
+    deps = ["@npm//c8"],
+)

@@ -8,6 +8,7 @@
         "@bazel/ibazel": "latest",
         "@bazel/jasmine": "^5.4.0",
         "@bazel/typescript": "latest",
+        "@types/jasmine": "^4.0.3",
         "c8": "^7.11.0",
         "jasmine": "^4.1.0",
         "typescript": "latest"
